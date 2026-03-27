@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "588067736147",
+    "project_id": "guilhermenettizp-rede-so-b882b",
+    "storage_bucket": "guilhermenettizp-rede-so-b882b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588067736147:android:e05b2c3f1d2f11f28d14a6",
+        "android_client_info": {
+          "package_name": "com.guilhermenettizp.redesocial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqa_j2W8pMh-RXLwXHEPJkqqr0pi3PoZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
