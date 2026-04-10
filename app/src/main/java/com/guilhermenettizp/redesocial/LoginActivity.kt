@@ -20,7 +20,6 @@ class LoginActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
-        // 🔥 Se já estiver logado, vai direto pra Home
         if (firebaseAuth.currentUser != null) {
             startActivity(Intent(this, HomeActivity::class.java))
             finish()
@@ -48,6 +47,10 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        binding.btnCriarConta.setOnClickListener {
+            startActivity(Intent(this, SignUpActivity::class.java))
         }
     }
 }
