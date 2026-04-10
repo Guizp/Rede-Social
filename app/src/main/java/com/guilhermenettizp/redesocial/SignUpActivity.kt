@@ -36,7 +36,6 @@ class SignUpActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // 🔥 Firebase
             firebaseAuth
                 .createUserWithEmailAndPassword(email, senha)
                 .addOnCompleteListener { task ->
@@ -51,6 +50,11 @@ class SignUpActivity : AppCompatActivity() {
                         ).show()
                     }
                 }
+        }
+
+        binding.btnVoltar.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }
     }
 }

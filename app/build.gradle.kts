@@ -43,6 +43,7 @@ android {
 
 dependencies {
 
+    implementation("com.google.firebase:firebase-firestore-ktx")
     implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
     implementation("com.google.firebase:firebase-auth")
     implementation("com.android.volley:volley:1.2.1")
