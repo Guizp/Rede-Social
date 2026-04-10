@@ -1,4 +1,4 @@
-package com.guilhermenettizp.redesocial
+package com.guilhermenettizp.redesocial.converter
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
