@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.guilhermenettizp.redesocial.databinding.PostItemBinding
 import com.guilhermenettizp.redesocial.model.Post
 
-class PostAdapter(private val posts: List<Post>) :
+class PostAdapter(private val posts: MutableList<Post>) :
     RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
 
-    inner class PostViewHolder(val binding: PostItemBinding) :
+    class PostViewHolder(val binding: PostItemBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
@@ -21,12 +21,19 @@ class PostAdapter(private val posts: List<Post>) :
         return PostViewHolder(binding)
     }
 
+    override fun getItemCount() = posts.size
+
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         val post = posts[position]
 
         holder.binding.txtDescricao.text = post.descricao
-        holder.binding.imgPost.setImageBitmap(post.imagem)
+        post.imagem?.let {
+            holder.binding.imgPost.setImageBitmap(it)
+        }
     }
 
-    override fun getItemCount(): Int = posts.size
+    fun adicionarPosts(novosPosts: List<Post>) {
+        posts.addAll(novosPosts)
+        notifyDataSetChanged()
+    }
 }

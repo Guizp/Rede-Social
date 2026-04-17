@@ -3,15 +3,13 @@ package com.guilhermenettizp.redesocial.ui
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.android.volley.Request
-import com.android.volley.toolbox.ImageRequest
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.Timestamp
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.guilhermenettizp.redesocial.adapter.PostAdapter
@@ -33,7 +31,8 @@ class HomeActivity : AppCompatActivity() {
 
     private var imagemSelecionada: Bitmap? = null
 
-    // GALERIA
+    private var ultimoTimestamp: Timestamp? = null
+
     private val galeria = registerForActivityResult(
         ActivityResultContracts.GetContent()
     ) { uri ->
@@ -97,40 +96,15 @@ class HomeActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
 
-        binding.btnCarregarFeed.setOnClickListener {
+        carregarPosts()
 
-            val db = Firebase.firestore
-
-            db.collection("posts")
-                .get()
-                .addOnCompleteListener { task ->
-
-                    if (!task.isSuccessful) {
-                        Toast.makeText(this, "Erro ao carregar feed", Toast.LENGTH_SHORT).show()
-                        return@addOnCompleteListener
-                    }
-
-                    val documentos = task.result
-
-                    posts.clear()
-
-                    for (document in documentos.documents) {
-
-                        val imageString = document.data?.get("imageString")?.toString() ?: ""
-                        val descricao = document.data?.get("descricao")?.toString() ?: ""
-
-                        try {
-                            val bitmap = Base64Converter.stringToBitmap(imageString)
-                            posts.add(Post(descricao, bitmap))
-                        } catch (e: Exception) {
-                            Toast.makeText(this, "Erro em um post", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-
-                    adapter = PostAdapter(posts)
-                    binding.recyclerView.adapter = adapter
+        binding.recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                if (!recyclerView.canScrollVertically(1)) {
+                    carregarPosts()
                 }
-        }
+            }
+        })
 
         binding.btnSelecionarImagem.setOnClickListener {
             galeria.launch("image/*")
@@ -148,14 +122,13 @@ class HomeActivity : AppCompatActivity() {
             val drawable = binding.imgPreviewPost.drawable
             val imageString = Base64Converter.drawableToString(drawable)
 
-            val db = Firebase.firestore
-
             val dados = hashMapOf(
                 "descricao" to descricao,
-                "imageString" to imageString
+                "imageString" to imageString,
+                "data" to Timestamp.now() //
             )
 
-            db.collection("posts")
+            Firebase.firestore.collection("posts")
                 .add(dados)
                 .addOnSuccessListener {
 
@@ -165,10 +138,66 @@ class HomeActivity : AppCompatActivity() {
                     binding.imgPreviewPost.setImageResource(0)
                     binding.imgPreviewPost.visibility = android.view.View.GONE
 
+                    posts.clear()
+                    ultimoTimestamp = null
+                    carregarPosts()
                 }
                 .addOnFailureListener {
                     Toast.makeText(this, "Erro ao criar post", Toast.LENGTH_SHORT).show()
                 }
+        }
+
+        binding.btnRefresh.setOnClickListener {
+            carregarPosts(reset = true)
+        }
+
+        binding.btnEditarPerfil.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
+    }
+
+    private fun carregarPosts(reset: Boolean = false) {
+
+        if (reset) {
+            posts.clear()
+            ultimoTimestamp = null
+        }
+
+        var query = Firebase.firestore
+            .collection("posts")
+            .orderBy("data", Query.Direction.DESCENDING)
+            .limit(5)
+
+        if (ultimoTimestamp != null) {
+            query = query.startAfter(ultimoTimestamp!!)
+        }
+
+        query.get().addOnSuccessListener { documentos ->
+
+            if (!documentos.isEmpty) {
+
+                ultimoTimestamp = documentos.documents.last().getTimestamp("data")
+
+                for (document in documentos.documents) {
+
+                    val imageString = document.getString("imageString") ?: ""
+                    val descricao = document.getString("descricao") ?: ""
+
+                    try {
+                        val bitmap = Base64Converter.stringToBitmap(imageString)
+
+                        val post = Post(descricao, bitmap)
+                        if (!posts.contains(post)) {
+                            posts.add(post)
+                        }
+
+                    } catch (e: Exception) {
+                        Toast.makeText(this, "Erro em um post", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                adapter.notifyDataSetChanged()
+            }
         }
     }
 }

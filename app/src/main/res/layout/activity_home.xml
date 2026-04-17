@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ImageView
         android:id="@+id/imgProfile"
         android:layout_width="100dp"
@@ -32,6 +33,14 @@
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/txtUsername"
         app:layout_constraintStart_toStartOf="@id/txtUsername"/>
+
+    <Button
+        android:id="@+id/btnEditarPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar"
+        app:layout_constraintTop_toTopOf="@id/imgProfile"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
         android:id="@+id/imgPreviewPost"
@@ -74,24 +83,26 @@
         android:layout_margin="8dp"/>
 
     <Button
-        android:id="@+id/btnCarregarFeed"
+        android:id="@+id/btnRefresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Carregar Feed"
-        app:layout_constraintTop_toBottomOf="@id/btnSelecionarImagem"
+        android:text="Atualizar"
+
+        app:layout_constraintTop_toBottomOf="@id/btnAddPost"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+
+        android:layout_marginTop="12dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/btnCarregarFeed"
-        app:layout_constraintBottom_toTopOf="@id/btnSair"
+
+        app:layout_constraintTop_toBottomOf="@id/btnRefresh"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="8dp"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/btnSair"
