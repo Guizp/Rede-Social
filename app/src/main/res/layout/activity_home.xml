@@ -6,14 +6,13 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:id="@+id/imgProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@drawable/empty_profile"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="80dp"/>
+        android:layout_margin="16dp"/>
 
     <TextView
         android:id="@+id/txtUsername"
@@ -21,10 +20,9 @@
         android:layout_height="wrap_content"
         android:text="Username"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/imgLogo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintTop_toTopOf="@id/imgProfile"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        android:layout_marginStart="16dp"/>
 
     <TextView
         android:id="@+id/txtNomeCompleto"
@@ -33,18 +31,75 @@
         android:text="Nome Completo"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/txtUsername"
+        app:layout_constraintStart_toStartOf="@id/txtUsername"/>
+
+    <ImageView
+        android:id="@+id/imgPreviewPost"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="68dp"
+        android:background="#DDD"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+
+    <EditText
+        android:id="@+id/edtDescricaoPost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Descrição do post"
+        app:layout_constraintTop_toBottomOf="@id/imgPreviewPost"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"/>
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/btnSelecionarImagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecionar imagem"
+        app:layout_constraintTop_toBottomOf="@id/edtDescricaoPost"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/btnAddPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publicar"
+        app:layout_constraintTop_toBottomOf="@id/edtDescricaoPost"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/btnCarregarFeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carregar Feed"
+        app:layout_constraintTop_toBottomOf="@id/btnSelecionarImagem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/btnCarregarFeed"
+        app:layout_constraintBottom_toTopOf="@id/btnSair"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"/>
 
     <Button
         android:id="@+id/btnSair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SAIR"
-        app:layout_constraintTop_toBottomOf="@id/txtNomeCompleto"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Sair"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"/>
+        android:layout_margin="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
