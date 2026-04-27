@@ -144,7 +144,7 @@ O projeto foi estruturado com separação de responsabilidades:
 
 ### 🔹 Login
 
-<img width="394" height="886" alt="Login" src="https://github.com/user-attachments/assets/3bc342f9-cfb1-4444-9106-2637998fba95" />
+<img width="396" height="823" alt="Login" src="https://github.com/user-attachments/assets/207c8dc7-c229-45ff-91d7-8ee30ad0e391" />
 
 ### 🔹 Criar Conta
 
