@@ -149,10 +149,14 @@ O projeto foi estruturado com separação de responsabilidades:
 
 ### 🔹 Demonstração Geral
 
-https://github.com/user-attachments/assets/879174a1-da3c-4cf7-a0e3-1a8c7c408413
+
+https://github.com/user-attachments/assets/17a8b739-e01e-4514-9dbe-5dc51fdff9b5
 
 
 ### 🔹 Criação de Post e Feed
+
+
+https://github.com/user-attachments/assets/ca510a1c-ca3b-4a26-8054-026d5a95d0c3
 
 
 ---
