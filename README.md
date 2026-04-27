@@ -142,6 +142,29 @@ O projeto foi estruturado com separação de responsabilidades:
 ## 🖼️ Capturas de Tela
 
 
+### 🔹 Login
+
+<img width="394" height="886" alt="Login" src="https://github.com/user-attachments/assets/3bc342f9-cfb1-4444-9106-2637998fba95" />
+
+### 🔹 Criar Conta
+
+<img width="398" height="886" alt="CriarConta" src="https://github.com/user-attachments/assets/20df4dc3-757c-4bd3-9899-a8fd924e1335" />
+
+### 🔹 Perfil
+
+<img width="394" height="883" alt="Perfil" src="https://github.com/user-attachments/assets/2d7682d7-7477-48bc-9a9e-1200f75dae6e" />
+
+### 🔹 Feed
+
+<img width="396" height="883" alt="Feed" src="https://github.com/user-attachments/assets/010aacd6-238b-4985-a66d-7c8b8694a41f" />
+
+### 🔹 Post-In
+
+<img width="396" height="886" alt="Post1" src="https://github.com/user-attachments/assets/fd5a1338-e650-4ae2-8b58-e7ffdf43436c" />
+
+### 🔹 Post-Out
+
+<img width="394" height="890" alt="Post2" src="https://github.com/user-attachments/assets/106c6d56-49a8-4a00-93c7-d0808989da7a" />
 
 ---
 
