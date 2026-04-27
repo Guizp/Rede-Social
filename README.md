@@ -146,21 +146,31 @@ O projeto foi estruturado com separação de responsabilidades:
 
 <img width="396" height="823" alt="Login" src="https://github.com/user-attachments/assets/207c8dc7-c229-45ff-91d7-8ee30ad0e391" />
 
+
+
 ### 🔹 Criar Conta
 
 <img width="398" height="886" alt="CriarConta" src="https://github.com/user-attachments/assets/20df4dc3-757c-4bd3-9899-a8fd924e1335" />
+
+
 
 ### 🔹 Perfil
 
 <img width="394" height="883" alt="Perfil" src="https://github.com/user-attachments/assets/2d7682d7-7477-48bc-9a9e-1200f75dae6e" />
 
+
+
 ### 🔹 Feed
 
 <img width="396" height="883" alt="Feed" src="https://github.com/user-attachments/assets/010aacd6-238b-4985-a66d-7c8b8694a41f" />
 
+
+
 ### 🔹 Post-In
 
 <img width="396" height="886" alt="Post1" src="https://github.com/user-attachments/assets/fd5a1338-e650-4ae2-8b58-e7ffdf43436c" />
+
+
 
 ### 🔹 Post-Out
 
