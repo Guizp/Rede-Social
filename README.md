@@ -149,12 +149,11 @@ O projeto foi estruturado com separação de responsabilidades:
 
 ### 🔹 Demonstração Geral
 
-[Screen_recording_20260417_115040.mp3](https://github.com/user-attachments/files/27123877/Screen_recording_20260417_115040.mp3)
+https://github.com/user-attachments/assets/879174a1-da3c-4cf7-a0e3-1a8c7c408413
 
 
 ### 🔹 Criação de Post e Feed
 
-[Screen_recording_20260417_115546.mp3](https://github.com/user-attachments/files/27123921/Screen_recording_20260417_115546.mp3)
 
 ---
 
