@@ -1,6 +1,6 @@
 # 📱 Rede Social
 
-* Projeto da disciplina ARQDMO1 – Dispositivos Móveis II
+* Projeto da disciplina ARQDMO2 – Dispositivos Móveis II
 * Professor: Henrique Galati
 * Instituição: IFSP - Campus Araraquara
 * Curso: Análise e Desenvolvimento de Sistemas
