@@ -44,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        binding.btnCriarConta.setOnClickListener {
+        binding.txtCriarConta.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
         }
     }

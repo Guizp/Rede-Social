@@ -3,72 +3,68 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="20dp">
 
     <ImageView
         android:id="@+id/profilePicture"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/empty_profile"
+        android:src="@android:drawable/ic_menu_camera"
         android:scaleType="centerCrop"
+        android:background="@android:color/darker_gray"
+        android:clipToOutline="true"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnAlterarFoto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="80dp"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/btnAlterarFoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ALTERAR FOTO"
+        android:text="Alterar foto"
         app:layout_constraintTop_toBottomOf="@id/profilePicture"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="8dp"/>
 
     <EditText
-        android:id="@+id/etUsername"
+        android:id="@+id/etNome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nome de usuário (público)"
+        android:hint="Username"
         app:layout_constraintTop_toBottomOf="@id/btnAlterarFoto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/etNomeCompleto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nome Completo"
-        app:layout_constraintTop_toBottomOf="@id/etUsername"
+        android:hint="Nome completo"
+        app:layout_constraintTop_toBottomOf="@id/etNome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="12dp"/>
 
     <Button
         android:id="@+id/btnSalvar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="SALVAR"
+        android:text="Salvar"
         app:layout_constraintTop_toBottomOf="@id/etNomeCompleto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="20dp"/>
 
     <Button
         android:id="@+id/btnVoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Voltar"
-        app:layout_constraintTop_toBottomOf="@+id/btnSalvar"
+        app:layout_constraintTop_toBottomOf="@id/btnSalvar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="12dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

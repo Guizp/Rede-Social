@@ -57,7 +57,7 @@ class ProfileActivity : AppCompatActivity() {
 
             if (userModel != null) {
 
-                binding.etUsername.setText(userModel.username)
+                binding.etNome.setText(userModel.username)
                 binding.etNomeCompleto.setText(userModel.nomeCompleto)
 
                 binding.etNomeCompleto.isEnabled = false
@@ -79,7 +79,7 @@ class ProfileActivity : AppCompatActivity() {
 
         binding.btnSalvar.setOnClickListener {
 
-            val username = binding.etUsername.text.toString()
+            val username = binding.etNome.text.toString()
             val nomeCompleto = binding.etNomeCompleto.text.toString()
 
             if (username.isEmpty()) {

@@ -151,7 +151,7 @@ class HomeActivity : AppCompatActivity() {
             carregarPosts(reset = true)
         }
 
-        binding.btnEditarPerfil.setOnClickListener {
+        binding.imgProfile.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
         }
     }
