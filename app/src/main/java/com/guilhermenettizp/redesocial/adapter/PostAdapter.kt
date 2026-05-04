@@ -27,9 +27,12 @@ class PostAdapter(private val posts: MutableList<Post>) :
         val post = posts[position]
 
         holder.binding.txtDescricao.text = post.descricao
+
         post.imagem?.let {
             holder.binding.imgPost.setImageBitmap(it)
         }
+
+        holder.binding.txtCidade.text = "${post.cidade}"
     }
 
     fun adicionarPosts(novosPosts: List<Post>) {
