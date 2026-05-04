@@ -144,23 +144,23 @@ O projeto foi estruturado com separação de responsabilidades:
 
 ### 🔹 Login
 
-<img width="1080" height="2400" alt="login" src="https://github.com/user-attachments/assets/cd896a9f-a146-4482-9ab4-753019026a2b" />
+<img width="540" height="1200" alt="login" src="https://github.com/user-attachments/assets/cd896a9f-a146-4482-9ab4-753019026a2b" />
 
 ### 🔹 Criar Conta
 
-<img width="1080" height="2400" alt="criarconta" src="https://github.com/user-attachments/assets/40e75b4e-dc3f-49b9-b23d-fa1e14bf78d6" />
+<img width="540" height="1200" alt="criarconta" src="https://github.com/user-attachments/assets/40e75b4e-dc3f-49b9-b23d-fa1e14bf78d6" />
 
 ### 🔹 Perfil
 
-<img width="1080" height="2400" alt="perfil" src="https://github.com/user-attachments/assets/b27e7995-9603-43be-b40a-f9c747b652ea" />
+<img width="540" height="1200" alt="perfil" src="https://github.com/user-attachments/assets/b27e7995-9603-43be-b40a-f9c747b652ea" />
 
 ### 🔹 Postar
 
-<img width="1080" height="2400" alt="postar" src="https://github.com/user-attachments/assets/e74c50ae-34a4-41ae-b6e5-4a943bdeaddf" />
+<img width="540" height="1200" alt="postar" src="https://github.com/user-attachments/assets/e74c50ae-34a4-41ae-b6e5-4a943bdeaddf" />
 
 ### 🔹 Página Inicial
 
-<img width="1080" height="2400" alt="paginicial" src="https://github.com/user-attachments/assets/ebfe94fb-7f8d-4f52-b701-16bb6bc2d916" />
+<img width="540" height="1200" alt="paginicial" src="https://github.com/user-attachments/assets/ebfe94fb-7f8d-4f52-b701-16bb6bc2d916" />
 
 
 ---
