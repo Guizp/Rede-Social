@@ -144,37 +144,24 @@ O projeto foi estruturado com separação de responsabilidades:
 
 ### 🔹 Login
 
-<img width="396" height="823" alt="Login" src="https://github.com/user-attachments/assets/207c8dc7-c229-45ff-91d7-8ee30ad0e391" />
-
-
+<img width="1080" height="2400" alt="login" src="https://github.com/user-attachments/assets/cd896a9f-a146-4482-9ab4-753019026a2b" />
 
 ### 🔹 Criar Conta
 
-<img width="398" height="886" alt="CriarConta" src="https://github.com/user-attachments/assets/20df4dc3-757c-4bd3-9899-a8fd924e1335" />
-
-
+<img width="1080" height="2400" alt="criarconta" src="https://github.com/user-attachments/assets/40e75b4e-dc3f-49b9-b23d-fa1e14bf78d6" />
 
 ### 🔹 Perfil
 
-<img width="394" height="883" alt="Perfil" src="https://github.com/user-attachments/assets/2d7682d7-7477-48bc-9a9e-1200f75dae6e" />
+<img width="1080" height="2400" alt="perfil" src="https://github.com/user-attachments/assets/b27e7995-9603-43be-b40a-f9c747b652ea" />
 
+### 🔹 Postar
 
+<img width="1080" height="2400" alt="postar" src="https://github.com/user-attachments/assets/e74c50ae-34a4-41ae-b6e5-4a943bdeaddf" />
 
-### 🔹 Feed
+### 🔹 Página Inicial
 
-<img width="396" height="883" alt="Feed" src="https://github.com/user-attachments/assets/010aacd6-238b-4985-a66d-7c8b8694a41f" />
+<img width="1080" height="2400" alt="paginicial" src="https://github.com/user-attachments/assets/ebfe94fb-7f8d-4f52-b701-16bb6bc2d916" />
 
-
-
-### 🔹 Post-In
-
-<img width="396" height="886" alt="Post1" src="https://github.com/user-attachments/assets/fd5a1338-e650-4ae2-8b58-e7ffdf43436c" />
-
-
-
-### 🔹 Post-Out
-
-<img width="394" height="890" alt="Post2" src="https://github.com/user-attachments/assets/106c6d56-49a8-4a00-93c7-d0808989da7a" />
 
 ---
 
